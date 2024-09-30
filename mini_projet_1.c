@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 
 int main()
 {
@@ -22,18 +22,21 @@ int main()
         printf("- Titre du livre [%d] : ",i);
         scanf("%s",&titre[i]);
     }
+    
     printf("Entrer les auteurs des livres(sans espace) :\n");
 
     for( i=0;i<nombre;i++){
         printf("- Auteur du livre [%d] : ",i);
         scanf("%s",&auteur[i]);
     }
+    
      printf("Entrer les prix des livres :\n");
 
     for(i=0;i<nombre;i++){
         printf("- Prix du livre [%d] : ",i);
         scanf("%f",&prix[i]);
     }
+    
     printf("Entrer la quantite en stock  :\n");
 
     for(i=0;i<nombre;i++){
