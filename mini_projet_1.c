@@ -6,35 +6,30 @@ int main()
 {
 
 
-    char titre[1000];
+    char titre[100];
     char auteur[100];
     float prix [100];
-    float quantite[1000];
-    int i,nombre;
+    float quantite[100];
+    char titre2[100];
+    int i,nombre , book_count;
 
 
     printf("Veuillez entrer le nombrer des livres que vous souhaitez stockees: ");
     scanf("%d",&nombre);
 
-    printf("Entrer les inforation suivantes:\n");
-
+    printf("Entrer les titres des livres (sans espace):\n");
 
     for(i=0;i<nombre;i++){
-
-        printf("- Titre du livre (sans espace) [%d] : ",i);
+        printf("- Titre du livre [%d] : ",i+1);
         scanf("%s",&titre[i]);
-
-        printf("- Auteur du livre (sans espace) [%d] : ",i);
+         printf("- Auteur du livre [%d] : ",i+1);
         scanf("%s",&auteur[i]);
-
-        printf("- Prix du livre [%d] : ",i);
+        printf("- Prix du livre [%d] : ",i+1);
         scanf("%f",&prix[i]);
-
-        printf("- Quantite en stock [%d] : ",i);
+        printf("- Quantite en stock [%d] : ",i+1);
         scanf("%f",&quantite[i]);
     }
-
-    printf("les Livres Disponibles : \n");
+    printf("les Livres Disponibles : \N");
     printf("============================================\n");
 
     for(i=0;i<nombre;i++){
@@ -49,7 +44,13 @@ int main()
 
         printf("============================================\n");
     }
+    printf("veuillez entrer lr titre dutableae : ");
+    scanf("%s",&titre2);
 
+
+        if (strstr(titre,titre2) !='\0'){
+            printf("existre");
+        }
 
 
 
