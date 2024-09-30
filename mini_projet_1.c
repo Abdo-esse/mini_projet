@@ -21,28 +21,15 @@ int main()
     for(i=0;i<nombre;i++){
         printf("- Titre du livre [%d] : ",i);
         scanf("%s",&titre[i]);
-    }
-    
-    printf("Entrer les auteurs des livres(sans espace) :\n");
-
-    for( i=0;i<nombre;i++){
-        printf("- Auteur du livre [%d] : ",i);
+         printf("- Auteur du livre [%d] : ",i);
         scanf("%s",&auteur[i]);
-    }
-    
-     printf("Entrer les prix des livres :\n");
-
-    for(i=0;i<nombre;i++){
         printf("- Prix du livre [%d] : ",i);
         scanf("%f",&prix[i]);
-    }
-    
-    printf("Entrer la quantite en stock  :\n");
-
-    for(i=0;i<nombre;i++){
         printf("- Quantite en stock [%d] : ",i);
         scanf("%f",&quantite[i]);
     }
+
+
 
 
 
