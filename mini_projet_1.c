@@ -16,19 +16,39 @@ int main()
     printf("Veuillez entrer le nombrer des livres que vous souhaitez stockees: ");
     scanf("%d",&nombre);
 
-    printf("Entrer les titres des livres (sans espace):\n");
+    printf("Entrer les inforation suivantes:\n");
+
 
     for(i=0;i<nombre;i++){
-        printf("- Titre du livre [%d] : ",i);
+
+        printf("- Titre du livre (sans espace) [%d] : ",i);
         scanf("%s",&titre[i]);
-         printf("- Auteur du livre [%d] : ",i);
+
+        printf("- Auteur du livre (sans espace) [%d] : ",i);
         scanf("%s",&auteur[i]);
+
         printf("- Prix du livre [%d] : ",i);
         scanf("%f",&prix[i]);
+
         printf("- Quantite en stock [%d] : ",i);
         scanf("%f",&quantite[i]);
     }
 
+    printf("les Livres Disponibles : \n");
+    printf("============================================\n");
+
+    for(i=0;i<nombre;i++){
+
+        printf("- Titre du livre [%d] :%s \n",i+1,titre);
+
+        printf("- Auteur du livre [%d] :%s \n",i+1,auteur);
+
+        printf("- Prix du livre [%d] :%d \n",i+1,prix);
+
+        printf("- Quantite en stock [%d] :%d \n",i+1,quantite);
+
+        printf("============================================\n");
+    }
 
 
 
