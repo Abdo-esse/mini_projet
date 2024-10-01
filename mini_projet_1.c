@@ -10,55 +10,56 @@ int main()
         char titre[100][100];
         char auteur [100][100];
         float prix[100];
-        int quantite[100];
-        int nbr=0;
+        float quantite[100];
+        int nbr;
+        char titreAMA[100];
+         int nquantite;
+         char titreAS ;
         int choix;
+        int t=0;
+        int x=0;
 
 
-
+         debut:
         do{
                 printf("\t Menu \n");
                 printf("1-Ajouter un livre . \n");
                 printf("2-Les livre disponible. \n");
                 printf("3-Modiffier la quantite du livre.  \n");
-                printf("4-Quiter\n");
+                printf("4-Supprimer un livre du stock.\n")
+                printf("5-Quiter.\n");
                 printf("Entrer votre choix : ");
                 scanf("%d",&choix);
                  getchar();
 
+     switch (choix){
+                  case 1:
+                      printf("veuillez enter taill: ");
+                      scanf("%d",&nbr);
 
-            if( choix == 1){
+                for(int i=0;i<nbr;i++){
 
-                if(nbr <100){
-
-                    printf("\t veuillez enter les information suivante\n");
+                    printf("\t veuillez enter les information suivante du livre : %d\n",i+1);
 
                     printf("Le titre de livre :");
-                    fgets(titre[nbr],100,stdin);
-                    titre[nbr][strcspn(titre[nbr],"\n")]='\0';
+                    scanf("%s",titre[i]);
 
                     printf("L'auteur de livre :");
-                    fgets(auteur[nbr],100,stdin);
-                    auteur[nbr][strcspn(auteur[nbr],"\n")]='\0';
+                    scanf("%s",auteur[i]);
 
                     printf("Le prix de livre :");
                     scanf("%f",&prix);
 
                     printf("La quantite de livre :");
-                    scanf("%d",&quantite);
-                    getchar();
+                    scanf("%f",&quantite);
 
-                    nbr++;
+
+
                     }
 
-                else{
+                break;
 
-                printf("Stockage est plien.");
-
-                }
-                }
-
-            else if ( choix == 2){
+                  case 2:
 
 
                  if (nbr ==0){
@@ -77,47 +78,45 @@ int main()
 
                          printf("Prix : %.2f\n",prix[i]);
 
-                         printf("Quantite : %d\n\n",quantite[i]);
+                         printf("Quantite : %.f\n\n",quantite[i]);
 
                          }
                  }
-            }
+                          break;
 
-            else if( choix == 3){
+                  case 3:
+                printf("Entrer le titre du livre peut modiffier : ");
+                scanf("%s", titreAMA);
+                for (int i = 0; i < nbr; i++) {
+                    if (strcmp(titre[i],titreAMA) == 0) {
+                        printf("La dernier stock : %d \n",&quantite);
+                        printf(" entrer le nouveau stock : ");
+                        scanf("%d", &nquantite);
+                        quantite[i] = nquantite;
+                        t= 1;
+                        break;
+                    }
+                }
+                if (!t) {
+                    printf("not found\n");
+                }
+                break;
+                   case 4:
+                        printf("Entrer le titre du livre peut suprimer : ");
+                        scanf("%s", titreAS);
+                        for (int i = 0; i < nbr; i++) {
+                            if (strcmp(titre[i],titreAS) == 0) {
 
-                    printf("rrrrrrrrrr");
-
-            }
-
-            else if (choix ==4){
-
+                      break;
+                case 5:
                     printf("Good by");
+                      break;
 
-            }
-
-            else{
+            default:
 
                  printf("Choix invalide. Veuillez reessayer.\n");
-            }
-
-
-
-
-
-
-
+     }
     }while (choix !=4);
-
-
-
-
-
-
-
-
-
-
-
     return 0;
 }
 
