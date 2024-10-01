@@ -18,10 +18,10 @@ int main()
 
 
     do{
-        printf("\n\t Menu \n");
+        printf("\n\t Systeme de Gestion de Stock dans une Librairie  \n\n");
         printf("1-Ajouter un livre au stock. \n");
         printf("2-Afficher tous les livres disponibles.\n");
-        printf("3-Mettre à jour la quantité d'un livre.\n");
+        printf("3-Mettre a jour la quantité d'un livre.\n");
         printf("4-Supprimer un livre du stock.\n");
         printf("5-Afficher le nombre total de livres en stock.\n");
         printf("6-Quiter.\n");
@@ -52,9 +52,9 @@ int main()
             else{
                 printf("\t les livre qui ajoute sont:\n");
              for(i=0;i<nbr;i++){
-            printf("\t Livre(%d):\n",i+1);
+            printf("\t\t Livre(%d):\n\n",i+1);
             printf("Titre du livre:%s",titre[i] );
-            printf("\t Auteur du livre:%s \n",auteur[i]);
+            printf("\t Auteur du livre:%s \n\n",auteur[i]);
             printf("Prix du livre:%.2f",prix[i]);
             printf("\t Quantite du livre:%.f \n",quantite[i]);
             }
@@ -103,9 +103,15 @@ int main()
                 printf("%s n'existe pas.",titreS);
                 break;
         case 5:
-            printf("cette fonctionallite n'est pes disponibl");
+             for(i=0;i<nbr;i++){
+                total=total+quantite[i];
+                }
+                printf("Le nombre total de livres en stock est %d livres",total);
+             break;
+
         case 6:
               printf("Good by");
+              break;
         default:
                printf("Erreur,veuillez entrer entrer 1 et 6");
 
